@@ -54,7 +54,7 @@ for i in range(len(right_cone_centroids) - 1):
     cv2.line(image, right_cone_centroids[i], right_cone_centroids[i + 1], (0, 0, 255), 5)
 
 # Save the output image with corrected parallel lines
-output_image_parallel_lines_path = 'answer8.png'
+output_image_parallel_lines_path = 'answer_clustering.png'
 cv2.imwrite(output_image_parallel_lines_path, image)
 
 print("Processing complete. The output image has been saved.")
