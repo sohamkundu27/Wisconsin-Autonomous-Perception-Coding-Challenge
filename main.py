@@ -9,13 +9,13 @@ image = cv2.imread(image_path_corrected)
 hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
 # Define the red color range for detecting the cones
-lower_red = np.array([0, 120, 70])
-upper_red = np.array([10, 255, 255])
-mask1 = cv2.inRange(hsv_image, lower_red, upper_red)
+lower_red_1 = np.array([0, 170, 150])  # Further increased saturation and value to filter out the door
+upper_red_1 = np.array([10, 255, 255])  # Upper bound remains the same
+mask1 = cv2.inRange(hsv_image, lower_red_1, upper_red_1)
 
-lower_red2 = np.array([170, 120, 70])
-upper_red2 = np.array([180, 255, 255])
-mask2 = cv2.inRange(hsv_image, lower_red2, upper_red2)
+lower_red_2 = np.array([170, 150, 130])  # Same adjustment for second red range
+upper_red_2 = np.array([180, 255, 255])
+mask2 = cv2.inRange(hsv_image, lower_red_2, upper_red_2)
 
 # Combine both masks for red color detection
 mask = mask1 | mask2
