@@ -1,3 +1,5 @@
 # Wisconsin Autonomous Perception Coding Challenge
- 
+
+I watch a couple tutorial and learned how to use OpenCV as I knew that would be the best way to complete the project. For array, I knew I wanted to use numpy, as I have used that before for other projects. My first approach didn't work, it was to grayscale the image and attempt to detect the cones by their contours, which is also known as their outlines. I don't think the outlines were easy enough to see, this is why when I tried to draw the line it wouldn't be striaght, as it would detect points on the chair on the right and the door on the left. My 2nd approch was a lot better, as this time I tried to detect the cones by their color. This worked a lot better since most of the colors in the picture are very monotone, and the cones are a bright red. Initially the lines weren't striaght so I spent a lot of time manipualting the HSV that would be detected, trying to find the right combination that only detected the cones. 
+
 ![answer-1](https://github.com/user-attachments/assets/1a8732b9-f0a6-4502-9a1c-0a28f618428a)
